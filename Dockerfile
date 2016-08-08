@@ -2,7 +2,7 @@ FROM python:2.7-alpine
 
 RUN apk update; apk upgrade; rm -rf /var/cache/apk/*
 RUN apk --update add bash alpine-sdk zeromq-dev nodejs
-RUN pip install jupyter[notebook]
+RUN pip install jupyter
 RUN npm install -g ijavascript
 
 RUN jupyter notebook --generate-config
