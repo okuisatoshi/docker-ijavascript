@@ -9,6 +9,9 @@ RUN jupyter notebook --generate-config
 RUN echo "c.NotebookApp.ip = '*'" >> /root/.jupyter/jupyter_notebook_config.py 
 RUN echo "c.NotebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook_config.py 
 
+VOLUME /work
+EXPOSE 8888
+
 ENTRYPOINT ["/usr/bin/ijs"] 
 
 
