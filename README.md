@@ -6,7 +6,7 @@
 To invoke a server:
 
 ```
-docker run -d -v $(pwd):/work -p 8888:8888 okuisatoshi/docker-ijavascript
+docker run -d -v $(pwd):/home/jupyter/work -p 8888:8888 okuisatoshi/docker-ijavascript
 ```
 The initial password is "ijsuser". Or you can use a token given by running:
 
