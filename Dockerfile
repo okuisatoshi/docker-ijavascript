@@ -5,7 +5,7 @@ RUN apk --update add bash alpine-sdk zeromq-dev nodejs
 RUN pip install jupyter
 RUN npm install -g ijavascript
 
-RUN jupyter notebook --generate-config
+RUN jupyter notebook --generate-config --allow-root
 RUN echo "c.NotebookApp.ip = '*'" >> /root/.jupyter/jupyter_notebook_config.py 
 RUN echo "c.NotebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook_config.py 
 
